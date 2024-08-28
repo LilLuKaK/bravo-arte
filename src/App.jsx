@@ -1,17 +1,22 @@
-import React from 'react';
+import React from "react";
 import "./styles/Global.css";
-import Header from './components/Header';
-import ProductList from './components/ProductList';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ProductList from "./components/ProductList";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
-    return (
-        <>
-            <Header />
-            <ProductList />
-            <Footer />
-        </>
-    );
+  return (
+    <Router>
+      <Header />
+        <Routes>
+          <Route path="/" element={<ProductList />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+        </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;

@@ -8,11 +8,11 @@
 body {
     font-family: 'Neue Haas Unica';
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
     margin: 0;
     padding: 0;
-    background-color: white;
-    color: black;
+    background-color: #ffffff;
+    color: #7e7975;
     text-align: center;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -20,11 +20,12 @@ body {
     user-select: none; 
 }
 
-a{
-    color: black;
+.enlace, a{
+    color: #7e7975;
     text-decoration: none;
+    transition: 600ms;
 }
 
-a.enlace:hover{
-    color: grey;
+.enlace:hover{
+    color: black;
 }
